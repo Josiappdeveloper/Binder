@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         sharePreferences= new MySharePreferences(ProfileActivity.this);
         tvname=(TextView)findViewById(R.id.tvname);
         tvcompleteprofile=(TextView)findViewById(R.id.tvcomplete);

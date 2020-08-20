@@ -64,7 +64,6 @@ public class IntroductionTwoActivity extends AppCompatActivity implements Recycl
                 itemlist= new ArrayList<>();
                 itemlist.add("Male");
                 itemlist.add("Female");
-                itemlist.add("Other");
 
                 LayoutInflater layoutInflater = (LayoutInflater) getApplication().getSystemService(LAYOUT_INFLATER_SERVICE);
                 ViewGroup container  = (ViewGroup) layoutInflater.inflate(R.layout.layout_for_popup_window,null);

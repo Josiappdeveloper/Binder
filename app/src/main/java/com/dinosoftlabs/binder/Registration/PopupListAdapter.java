@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dinosoftlabs.binder.AppUtils.MySharePreferences;
@@ -56,9 +57,13 @@ public class PopupListAdapter extends RecyclerView.Adapter<PopupListAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvname;
+        LinearLayout linearLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            linearLayout=itemView.findViewById(R.id.lineback);
             tvname=(TextView)itemView.findViewById(R.id.tvname);
+
+
         }
     }
 }

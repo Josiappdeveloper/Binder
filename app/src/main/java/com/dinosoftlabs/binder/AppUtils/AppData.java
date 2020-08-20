@@ -2,10 +2,10 @@ package com.dinosoftlabs.binder.AppUtils;
 
 public class AppData {
     public static String ContactNumber;
-    public static String fullname;
-    public static String email;
-    public static String about;
-    public static String gender;
+    public static String fullname=null;
+    public static String email=null;
+    public static String about=null;
+    public static String gender=null;
     public static String dob;
     public static String fieldofstudy;
     public static String qualification;

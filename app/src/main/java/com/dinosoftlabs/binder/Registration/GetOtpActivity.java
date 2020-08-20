@@ -47,19 +47,22 @@ public class GetOtpActivity extends AppCompatActivity {
         imgedit=(ImageView)findViewById(R.id.imgedit);
         etotp=(EditText)findViewById(R.id.etotp);
 
-        sendVerificationCode(phone);
+       // sendVerificationCode(phone);
         tvphone.setText(phone);
-        imgedit.setOnClickListener(new View.OnClickListener() {
+        /*imgedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it= new Intent(GetOtpActivity.this,LoginWithPhoneActivity.class);
                 startActivity(it);
             }
-        });
+        });*/
 
     }
-
     public void GetOtp(View view) {
+        Intent i=new Intent(GetOtpActivity.this,BasicIntroductionActivity.class);
+        startActivity(i);
+    }
+    /*public void GetOtp(View view) {
         String code = etotp.getText().toString().trim();
         if (code.isEmpty() || code.length() < 6) {
             etotp.setError("Enter valid code");
@@ -71,13 +74,13 @@ public class GetOtpActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
 
-
+//phone auth//
     //the method is sending verification code
     //the country id is concatenated
     //you can take the country id as user input as well
-    private void sendVerificationCode(String mobile) {
+    /*private void sendVerificationCode(String mobile) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+91" + mobile,
                 60,
@@ -107,7 +110,7 @@ public class GetOtpActivity extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(GetOtpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(GetOtpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -160,5 +163,5 @@ public class GetOtpActivity extends AppCompatActivity {
                         }
                     }
                 });
-    }
+    }*/
 }

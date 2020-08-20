@@ -45,7 +45,7 @@ import java.util.Locale;
 
 public class BasicIntroductionActivity extends AppCompatActivity implements RecyclerClickInterface{
 
-    EditText etfullname,etemail,etabout;
+    EditText Etfullname,Etemail,Etabout;
     TextView etgender,tvbirthdate,tvlocation;
     PopupWindow popupWindow;
     List<String> itemlist;
@@ -64,13 +64,18 @@ public class BasicIntroductionActivity extends AppCompatActivity implements Recy
 
         sharePreferences= new MySharePreferences(BasicIntroductionActivity.this);
         recyclerClickInterface= BasicIntroductionActivity.this;
-        etfullname=(EditText)findViewById(R.id.etfullname);
-        etabout=(EditText)findViewById(R.id.etfullname);
-        etemail=(EditText)findViewById(R.id.etfullname);
+        Etfullname=(EditText)findViewById(R.id.etfullname);
+        Etabout=(EditText)findViewById(R.id.etabout);
+        Etemail=(EditText)findViewById(R.id.etemail);
         etgender=(TextView)findViewById(R.id.etgender);
         tvbirthdate=(TextView)findViewById(R.id.tvbirthdate);
         tvlocation=(TextView)findViewById(R.id.tvlocation);
         gender= getResources().getStringArray(R.array.gender);
+
+        Etfullname.setText( AppData.fullname);
+        Etabout.setText(AppData.about);
+        Etemail.setText(AppData.email);
+        tvbirthdate.setText(AppData.dob);
 
         tvlocation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +144,6 @@ public class BasicIntroductionActivity extends AppCompatActivity implements Recy
                 itemlist= new ArrayList<String>();
                 itemlist.add("Male");
                 itemlist.add("Female");
-                itemlist.add("Other");
 
                 int width = LinearLayout.LayoutParams.WRAP_CONTENT;
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -166,17 +170,28 @@ public class BasicIntroductionActivity extends AppCompatActivity implements Recy
 
             }
         });
-
     }
 
     public void GetBasicIntro(View view) {
+        String names = Etfullname.getText().toString();
+        String emails = Etemail.getText().toString();
 
-        AppData.fullname= etfullname.getText().toString();
-        AppData.about= etabout.getText().toString();
-        AppData.email= etemail.getText().toString();
-        AppData.dob=etemail.getText().toString();
-        Intent it= new Intent(BasicIntroductionActivity.this, IntroductionOneActivity.class);
-        startActivity(it);
+        if(names.isEmpty()){
+            Etfullname.setError("Name Should not be Left Blank");
+            Etfullname.requestFocus();
+            return;
+        }else if (emails.isEmpty()){
+            Etemail.setError("Email Should not be Left Blank");
+            Etemail.requestFocus();
+        }
+        else {
+            AppData.fullname=Etfullname.getText().toString();
+            AppData.email=Etemail.getText().toString();
+            AppData.about=Etabout.getText().toString();
+            AppData.dob=tvbirthdate.getText().toString();
+            Intent it = new Intent(BasicIntroductionActivity.this, IntroductionOneActivity.class);
+            startActivity(it);
+        }
     }
 
     @Override
@@ -200,4 +215,5 @@ public class BasicIntroductionActivity extends AppCompatActivity implements Recy
             return false;
         }
     }
+
 }
