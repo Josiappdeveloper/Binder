@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Login_A"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/d_login_screen"
+    tools:context="com.dinosoftlabs.binder.Accounts.Login_A">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="55%"
+            android:id="@+id/upperlayout"
+            android:gravity="center"
+            android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imglogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/applogo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imglogo"
+                android:text="true dates"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/amaranth_bold"
+                android:textStyle="bold"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:overScrollMode="always"
+                android:layout_above="@+id/indicator"
+                />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:tabBackground="@drawable/d_indicator_background"
+                app:tabGravity="center"
+                android:visibility="gone"
+                app:tabIndicatorHeight="0dp"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/upperlayout"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:text="By clicking Log in, you agree with our terms. Learn how we process your data in our Privacy Policy and Cookies Policy.  "/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@drawable/d_botton_login_background">
+
+                <Button
+                    android:id="@+id/btn_createaccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textSize="14dp"
+                    android:text="@string/create_an_account"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_google_background">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_facebook"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/com_facebook_blue"
+                    android:layout_centerVertical="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:text="@string/continue_with_facebook"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="Login"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/gmail_login_layout"
+                android:background="@drawable/ic_google_background">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_gmail"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:clickable="false"
+                    android:textAllCaps="true"
+                    android:textSize="14dp"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:background="@color/transparent"
+                    android:text="@string/continue_with_google"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/phone_login_layout"
+                android:background="@drawable/ic_google_background">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:clickable="false"
+                    android:textSize="13dp"
+                    android:onClick="LoginWithPhone"
+                    android:background="@color/transparent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:text="@string/continue_with_phone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btn_signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:clickable="false"
+                    android:textSize="13dp"
+                    android:background="@color/transparent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:text="@string/sign_in"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Trouble logging in?"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:lineSpacingExtra="7dp"/>
+
+        </LinearLayout>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+</ScrollView>
+
+
+</FrameLayout>
