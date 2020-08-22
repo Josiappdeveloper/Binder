@@ -22,7 +22,8 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        sharePreferences= new MySharePreferences(EditProfileActivity.this);
+
+       /* sharePreferences= new MySharePreferences(EditProfileActivity.this);
         imgprofile=(ImageView)findViewById(R.id.imgprofile);
         try {
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(sharePreferences.getImg_one()));
@@ -34,5 +35,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
     public void BackButton(View view) {
         finish();
+    }*/
     }
 }
