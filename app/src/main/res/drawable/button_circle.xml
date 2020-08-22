@@ -7,4 +7,10 @@
         android:bottom="2dp" />
     <corners android:radius="60dp" />
     <solid android:color="#4d4dff" />
+
+    <gradient
+        android:startColor="#4d4dff"
+        android:centerColor="#F88379"
+        android:endColor="#4d4dff"
+        android:angle="45"/>
 </shape>

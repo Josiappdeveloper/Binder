@@ -37,7 +37,7 @@ import java.io.IOException;
 public class Profile_F extends RootFragment {
 
     View view;
-    Context context;
+ /*   Context context;
     public static ImageView profile_image;
     TextView user_name;
     public static TextView age;
@@ -50,14 +50,14 @@ public class Profile_F extends RootFragment {
 
     public Profile_F() {
         // Required empty public constructor
-    }
+    }*/
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.activity_profile, container, false);
-        context=getContext();
+        /*context=getContext();
 
         sharePreferences= new MySharePreferences(getActivity());
         tvname=(TextView)view.findViewById(R.id.tvname);
@@ -87,7 +87,7 @@ public class Profile_F extends RootFragment {
                 startActivity(it);
             }
         });
-
+*/
         /*edit_profile_layout=view.findViewById(R.id.edit_profile_layout);
         edit_profile_layout.setOnClickListener(new View.OnClickListener() {
             @Override

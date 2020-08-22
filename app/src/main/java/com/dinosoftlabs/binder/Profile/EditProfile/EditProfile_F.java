@@ -54,10 +54,9 @@ import static com.dinosoftlabs.binder.CodeClasses.Variables.Select_image_from_ga
 
 /**
  * A simple {@link Fragment} subclass.
- */
-public class EditProfile_F extends Fragment {
+public class EditProfile_F extends Fragment {*/
 
-    View view;
+ /*   View view;
     Context context;
 
     DragRecyclerView profile_photo_list;
@@ -357,9 +356,9 @@ public class EditProfile_F extends Fragment {
 
     }
 
+*/
 
-
-    // below two method is used get the user pictures and about text from our server
+  /*  // below two method is used get the user pictures and about text from our server
     private void Get_User_info() {
 
         JSONObject parameters = new JSONObject();
@@ -380,10 +379,10 @@ public class EditProfile_F extends Fragment {
         });
 
 
-    }
+    }*/
 
 
-    public void Parse_user_info(String loginData){
+    /*public void Parse_user_info(String loginData){
 
         try {
             JSONObject jsonObject=new JSONObject(loginData);
@@ -423,10 +422,10 @@ public class EditProfile_F extends Fragment {
             e.printStackTrace();
         }
 
-    }
+    }*/
 
 
-    // on done btn press this method will call
+  /*  // on done btn press this method will call
     // below two mehtod is user for save the change in our profile which we have done
     private void Call_Api_For_edit() {
 
@@ -470,7 +469,7 @@ public class EditProfile_F extends Fragment {
             e.printStackTrace();
         }
 
-        Functions.Show_loader(context,false,false);
+ *//*       Functions.Show_loader(context,false,false);
         ApiRequest.Call_Api(context, Variables.Edit_profile, parameters, new Callback() {
             @Override
             public void Responce(String resp) {
@@ -481,9 +480,9 @@ public class EditProfile_F extends Fragment {
 
 
 
-    }
+    }*//*
 
-    public void Parse_edit_data(String loginData){
+*//*    public void Parse_edit_data(String loginData){
 
         try {
 
@@ -526,8 +525,8 @@ public class EditProfile_F extends Fragment {
             e.printStackTrace();
         }
 
-    }
+    }*//*
 
 
 
-}
+}*/
