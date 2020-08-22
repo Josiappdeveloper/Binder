@@ -22,7 +22,6 @@ import com.dinosoftlabs.binder.CodeClasses.ApiRequest;
 import com.dinosoftlabs.binder.CodeClasses.Callback;
 import com.dinosoftlabs.binder.CodeClasses.Variables;
 import com.dinosoftlabs.binder.Main_Menu.MainMenuActivity;
-import com.dinosoftlabs.binder.Profile.EditProfile.EditProfile_F;
 import com.dinosoftlabs.binder.R;
 import com.dinosoftlabs.binder.Users.Images_sliding_adapter;
 import com.google.android.material.tabs.TabLayout;

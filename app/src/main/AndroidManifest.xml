@@ -37,7 +37,9 @@
         android:supportsRtl="true"
         android:theme="@style/noactionbar_whiteStatus"
         tools:replace="allowBackup">
-        <activity android:name=".Profile.EditProfileActivity"></activity>
+        <activity android:name=".Settings.SettingActivity" android:parentActivityName=".Profile.ProfileActivity">
+        </activity>
+        <activity android:name=".Profile.EditProfileActivity" />
         <activity android:name=".Profile.ProfileActivity" />
         <activity android:name=".Registration.PhotoActivity" />
         <activity android:name=".Registration.IntroductionOneActivity" />
