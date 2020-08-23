@@ -23,7 +23,6 @@ import com.dinosoftlabs.binder.AppUtils.MySharePreferences;
 import com.dinosoftlabs.binder.CodeClasses.Variables;
 import com.dinosoftlabs.binder.Main_Menu.MainMenuActivity;
 import com.dinosoftlabs.binder.Main_Menu.RelateToFragment_OnBack.RootFragment;
-import com.dinosoftlabs.binder.Profile.EditProfile.EditProfile_F;
 import com.dinosoftlabs.binder.Profile.Profile_Details.Profile_Details_F;
 import com.dinosoftlabs.binder.R;
 import com.dinosoftlabs.binder.Settings.Setting_F;
@@ -151,13 +150,13 @@ public class Profile_F extends RootFragment {
 
 
     // open the view of Edit profile where 6 pic is visible
-    public void Editprofile(){
+   /* public void Editprofile(){
         EditProfile_F editProfile_f = new EditProfile_F();
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
         transaction.addToBackStack(null);
         transaction.replace(R.id.MainMenuFragment, editProfile_f,"EditProfile_F").commit();
-    }
+    }*/
 
 
     // open the view of Edit profile where 6 pic is visible

@@ -37,7 +37,7 @@ import java.util.ArrayList;
  */
 public class Profile_Details_F extends Fragment {
 
-    View view;
+  /*  View view;
     Context context;
 
     ImageButton move_downbtn,edit_btn;
@@ -268,13 +268,14 @@ public class Profile_Details_F extends Fragment {
 
 
     // open the view of Edit profile where 6 pic is visible
-    public void Editprofile(){
+  *//*  public void Editprofile(){
         EditProfile_F editProfile_f = new EditProfile_F();
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
        //transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
         transaction.addToBackStack(null);
         transaction.replace(R.id.MainMenuFragment, editProfile_f).commit();
-    }
+    }*//*
 
 
+*/
 }

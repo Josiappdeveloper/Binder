@@ -40,7 +40,10 @@
         <activity android:name=".Settings.SettingActivity" android:parentActivityName=".Profile.ProfileActivity">
         </activity>
         <activity android:name=".Profile.EditProfileActivity" />
-        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Profile.ProfileActivity">
+        </activity>
+
+
         <activity android:name=".Registration.PhotoActivity" />
         <activity android:name=".Registration.IntroductionOneActivity" />
         <activity android:name=".Registration.IntroductionFourActivity" />
